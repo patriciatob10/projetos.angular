@@ -1,0 +1,17 @@
+<div class="card col m-1" [ngClass]="{'bg-danger': tarefa?.urgente}" style="min-width: 300px; max-width: 300px">
+    <div class="card-body">
+        <h5 class="card-title">{{tarefa?.descricao}}</h5>
+        <p class="card-text">{{tarefa?.data | date:"dd/MM/yyyy"}}</p>
+    </div>
+    <div class="action-container">
+        <span (click)="excluir()" class="material-icons">delete</span>
+        <span (click)="editar()" class="material-icons">edit</span>
+    </div>
+</div>
+
+<!--
+    Criar o método no service que faz a solicitação da exclusão para o back-end
+    Lembre-se o back-end espera o ID tarefa a ser excluída
+    Chamar o service dentro da função excluir do componente
+    DESAFIO: atualizar a lista depois da exclusão
+-->

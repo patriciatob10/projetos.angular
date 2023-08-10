@@ -1,0 +1,22 @@
+<div class="card p-4 shadow">
+    <h4>Editar tarefa</h4>
+
+    <form [formGroup]="checkoutForm" (ngSubmit)="salvarTarefa()">
+        <div class="mb-3">
+            <label for="descricao" class="form-label">Descrição</label>
+            <input type="text" class="form-control"
+                id="descricao" formControlName="descricao">
+        </div>
+        <div class="mb-3">
+            <label for="data" class="form-label">Data</label>
+            <input type="date" class="form-control" 
+                id="data" formControlName="data">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input"
+                id="urgente" formControlName="urgente">
+            <label class="form-check-label" for="urgente">Urgente?</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+</div>
